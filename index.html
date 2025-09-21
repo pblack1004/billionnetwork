@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Billion network for your happy life in korea</title>
+<style>
+    body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 테이블을 대체하는 히어로 섹션 */
+.hero-section {
+    width: 100vw;
+    height: 600px;
+    background-image: url('top1.png');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.65);
+    z-index: 1;
+}
+
+.text-container {
+    position: relative;
+    z-index: 2;
+    color: #333;
+}
+.text-line-1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+.text-line-2 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 1200px;
+    align-items: center;
+    margin-left: auto; /* 센터 정렬을 위해 추가 */
+    margin-right: auto; /* 센터 정렬을 위해 추가 */
+}
+.sunset-boxes-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 520px;
+}
+.sunset-boxes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.sunset-box {
+    width: 100%;
+    padding: 20px;
+    background-color: #eecdc1;
+    color: black;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.intro-text-area {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 50px 0 0 0;
+    text-align: left;
+    line-height: 1.6;
+    color: #555;
+    font-size: 60px;
+    font-weight: bold;
+}
+.box-head {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.box-content {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 새롭게 추가된 3x3 테이블 스타일 */
+.new-table-3x3-container {
+    width: 90%; /* 화면 크기에 맞춰 폭 조정 */
+    max-width: 1200px; /* 최대 폭 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.new-table-3x3 {
+    border-collapse: collapse;
+    width: 100%;
+}
+.new-table-3x3 th, .new-table-3x3 td {
+    border: none;
+    padding: 0; /* 내부 마진(패딩)을 0으로 설정 */
+    text-align: center;
+}
+/* 테이블 내부 이미지 스타일 */
+.table-image {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+.new-table-3x3 td:first-child {
+    width: 120px; /* 이미지 폭에 맞춰 첫째 열의 폭을 고정 */
+}
+.new-table-3x3 td:last-child {
+    width: 100%; /* 둘째 열이 남은 공간을 모두 차지하도록 설정 */
+}
+.table-heading {
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+}
+.table-subheading {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+.table-bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.table-bullet-list li {
+    position: relative;
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+.table-bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* 테이블 배경 섹션 스타일 */
+.table-background-section {
+    width: 100vw;
+    background-color: rgb(255, 219, 200);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* 새로 추가된 글상자 스타일 */
+.new-textbox-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.new-textbox {
+    width: 100%;
+    border: 2px solid #e5beb2;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.new-textbox-left, .new-textbox-right {
+    padding: 15px;
+}
+.new-textbox-left {
+    background-color: #ffd8cc;
+    border-right: 2px solid #e5beb2;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* 추가된 스타일: 이미지 중앙 정렬 */
+.new-textbox-left img {
+    max-width: 60px; /* 이미지 크기 조절 */
+    height: auto;
+}
+.new-textbox-right {
+    background-color: #ffdbc8;
+    text-align: left;
+}
+/* 추가된 스타일: 글상자 오른쪽 영역의 폰트 크기 및 상하 간격 조정 */
+.new-textbox-right div:first-child {
+    margin-bottom: 10px;
+}
+.new-textbox-right ul,
+.new-textbox-right ul li {
+    font-size: 20px;
+}
+/* 새로 추가된 주요 서비스 제목 스타일 */
+.section-heading-container {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: left;
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+/* 새롭게 추가된 대학 요약 글상자 스타일 */
+.university-summary-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+.university-summary-box {
+    height: 600px;
+    border: 2px solid #e5beb2;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.university-summary-half {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffdbc8;
+}
+.university-summary-half:first-child {
+    border-bottom: 2px solid #e5beb2;
+    /* 배경 이미지가 글상자를 채우도록 수정 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 서울대학교 글상자 스타일 - 불필요한 스타일 제거 및 공통 클래스 사용 */
+.university-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px; /* 제목을 위에서 20px 내리기 */
+    text-align: left; /* 제목 왼쪽 정렬 */
+}
+.university-description {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: left; /* 설명 텍스트 왼쪽 정렬 */
+}
+
+/* Billion network 강점 아래 새로운 글상자 스타일 */
+.section-intro-text {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left; /* 왼쪽 정렬로 수정 */
+    color: #555;
+}
+
+/* 새로 추가된 강점 섹션 글상자 컨테이너 스타일 */
+.strength-grid-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+/* 각 강점 글상자 스타일 */
+.strength-box {
+    width: 550px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 0px solid black;
+}
+
+/* 강점 글상자 내부의 모든 div 패딩을 0으로 설정 */
+.strength-box > div {
+    padding: 10;
+}
+
+/* 강점 글상자 내부 섹션 비율 및 구분선 스타일 */
+.strength-top {
+    height: 30%;
+}
+.strength-middle {
+    height: 20%;
+    margin-top: 0px;
+}
+.strength-bottom {
+    height: 50%;
+    margin-top: 0px;
+}
+.strength-top h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.strength-top p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.strength-middle p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.strength-bottom p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* last container 관련 */
+.last-grid-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+/* 각 last 글상자 스타일 */
+.last-box {
+    background-color: rgb(255,216,204);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* last 글상자 내부의 모든 div 패딩을 0으로 설정 */
+.last-box > div {
+    padding: 10;
+}
+
+/* last 글상자 내부 섹션 비율 및 구분선 스타일 */
+.last-top {
+    height: 30%;
+}
+.last-middle {
+    height: 20%;
+    margin-top: 0px;
+}
+.last-bottom {
+    height: 50%;
+    margin-top: 0px;
+}
+.last-top h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.last-top p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.last-middle p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.last-bottom p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 새로운 흰색 박스 스타일 */
+.last-box.white-box {
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    text-align: center;
+}
+.last-box.white-box h3, .last-box.white-box p {
+    color: #ffffff;
+}
+.last-box img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.last-box h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.last-box p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #777;
+}
+
+
+/* 전체 너비를 차지하는 새로운 상자 스타일 */
+@media (min-width: 768px) {
+    .full-width-box {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (max-width: 1300px) {
+    .strength-grid-container {
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .strength-box {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+    }
+    .strength-top,
+    .strength-middle,
+    .strength-bottom {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .sunset-boxes-wrapper,
+    .image-container {
+        width: 100%;
+    }
+    .responsive-image {
+        width: 100%;
+        height: auto;
+    }
+    .intro-text-area {
+        font-size: 40px;
+        padding-top: 30px;
+    }
+    .text-line-1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .image-container {
+        padding-top: 0;
+    }
+    .new-textbox-container {
+        grid-template-columns: 1fr;
+    }
+    .section-heading-container {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    /* 모바일 화면에서 대학 소개 상자를 한 줄로 */
+    .university-summary-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    /* 모바일에서 새로 추가된 그리드 컨테이너의 열 수를 1개로 변경 */
+    .new-grid-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    /* 모바일에서 새로운 텍스트 상자들의 너비를 100%로 변경 */
+    .new-text-box {
+        width: 100%;
+    }
+    /* 모바일에서 컨텐츠를 세로로 배열 */
+    .final-section-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 새로 추가된 마지막 세션 스타일 */
+.final-section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.final-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .final-section-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 40px;
+    }
+    .text-box-bold {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 1.4;
+        color: #333;
+    }
+    .text-box-normal {
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 1.6;
+        color: #555;
+    }
+    .last-grid-container {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .right-content-wrapper {
+        text-align: left;
+    }
+    .flag-image-box {
+        width: 500px;
+        max-width: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-image: url('flag.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.flag-image-box {
+    width: 100%;
+    max-width: 600px;
+    height: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flag-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text-boxes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.section-title-final {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.text-box-bold {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.text-box-normal {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.right-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 새로 추가된 2x2 그리드 텍스트 상자 컨테이너 */
+.new-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* 새로 추가된 텍스트 상자 스타일 */
+.new-text-box {
+    height: auto;
+    width: 100px;
+    min-height: 150px;
+    background-color: #ffd8cc;
+    border: 2px solid #e5beb2;
+    border-radius: 4px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+</style>
+
+
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="text-container">
+            <div class="text-line-1">한국 유학의 꿈을 현실로</div>
+            <div class="text-line-2">해외 학생들을 위한 완벽한 한국 유학 솔루션 - 한국어 학습부터 대학 진학 취업까지 원스톱 서비스</div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <div class="sunset-boxes-wrapper">
+            <div class="intro-text-area">
+                왜 한국 유학인가?
+            </div>
+            <div class="sunset-boxes-container">
+                <div class="sunset-box">
+                    <div class="box-head">세계적 교육 수준</div>
+                    <div class="box-content">QS 세계 대학 랭킹 상위권에 다수의 한국 대학이 포함되어 있으며, 특히 공학, IT, 의학 분야에서 세계 최고 수준의 교육을 제공합니다.</div>
+                </div>
+                <div class="sunset-box">
+                    <div class="box-head">글로벌 기업 취업 기회</div>
+                    <div class="box-content">삼성, LG, 현대 등 세계적인 한국 기업들과 한국에 진출한 다국적 기업들에서 다양한 취업 기회를 제공합니다.</div>
+                </div>
+                <div class="sunset-box">
+                    <div class="box-head">합리적인 교육비</div>
+                    <div class="box-content">미국, 영국 등 다른 선진국 대비 상대적으로 저렴한 학비와 생활비로 양질의 교육을 받을 수 있습니다.</div>
+                </div>
+                <div class="sunset-box">
+                    <div class="box-head">풍부한 문화 경험</div>
+                    <div class="box-content">K-pop, K-드라마로 대표되는 한류 문화와 전통 문화가 조화를 이루는 독특한 문화 경험을 할 수 있습니다.</div>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="top21.png" alt="한국 유학 이미지" class="responsive-image">
+        </div>
+    </div>
+
+
+    <!-- 2PAGE. 새로운 테이블을 감싸는 배경 섹션 추가 -->
+    <div class="table-background-section">
+        <!-- 새로운 3x3 테이블 시작 -->
+        <div class="new-table-3x3-container">
+            <table class="new-table-3x3">
+                <tr>
+                    <td colspan="2"><div style="font-weight: bold; font-size: 50px; padding: 20px; text-align: left;">완벽한 유학 로드맵</div></td>
+                </tr>
+                <tr>
+                    <td><img src="s1_1.png" alt="이미지 1" class="table-image"></td>
+                    <td>
+                        <div style="padding: 10px; text-align: left;">
+                            <div class="table-heading">한국어 학습 단계</div>
+                            <div class="table-subheading">체계적인 한국어 교육 프로그램을 통해 TOPIK 4급 이상의 실력을 갖춰 대학 진학 준비를 완료합니다.</div>
+                            <ul class="table-bullet-list">
+                                <li>기초 한국어 과정(3개월)</li>
+                                <li>중급 한국어 과정(6개월)</li>
+                                <li>고급 한국어 과정(3개월)</li>
+                                <li>TOPIK 시험 준비반</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="s1_2.png" alt="이미지 2" class="table-image"></td>
+                    <td>
+                        <div style="padding: 10px; text-align: left;">
+                            <div class="table-heading">대학 진학 단계</div>
+                            <div class="table-subheading">개인별 맞춤 상담을 통해 최적의 대학과 전공을 선택하고 입학 준비를 체계적으로 진행합니다.</div>
+                            <ul class="table-bullet-list">
+                                <li>대학 정보 제공 및 상담</li>
+                                <li>입학 서류 준비 지원</li>
+                                <li>면접 및 실기 준비</li>
+                                <li>장학금 신청 지원</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="s1_3.png" alt="이미지 3" class="table-image"></td>
+                    <td>
+                        <div style="padding: 10px; text-align: left;">
+                            <div class="table-heading">취업 연계 단계</div>
+                            <div class="table-subheading">재학 중부터 체계적인 취업 준비를 통해 졸업 후 성공적인 한국 취업을 실현합니다.</div>
+                            <ul class="table-bullet-list">
+                                <li>인턴십 프로그램 연계</li>
+                                <li>취업 역량 강화 교육</li>
+                                <li>기업 채용 정보 제공</li>
+                                <li>면접 및 이력서 작성 지도</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 새로운 3x3 테이블 끝 -->
+
+
+    <!-- 새로 추가된 주요 서비스 제목 -->
+        <div class="section-heading-container">
+            주요 서비스
+        </div>
+    <!-- 새로 추가된 글상자들 -->
+    <div class="new-textbox-container">
+        <div class="new-textbox">
+            <div class="new-textbox-left"><img src="11.png" alt="한국어 학원 아이콘"></div>
+            <div class="new-textbox-right">
+                <div style="font-weight: bold; font-size: 25px;">한국어 학원</div>
+                <ul class="table-bullet-list">
+                    <li>온라인 한국어 강의</li>
+                    <li>오프라인 집중 과정</li>
+                    <li>TOPIK 시험 준비반</li>
+                    <li>회화 특별반</li>    
+                    <li>비즈니스 한국어</li>
+                </ul>
+            </div>
+        </div>
+        <div class="new-textbox">
+            <div class="new-textbox-left"><img src="12.png" alt="취업 지원 아이콘"></div>
+            <div class="new-textbox-right">
+                <div style="font-weight: bold; font-size: 25px;">취업 지원</div>
+                <ul class="table-bullet-list">
+                    <li>취업 정보 제공</li>
+                    <li>이력서 작성 지도</li>
+                    <li>면접 준비 교육</li>
+                    <li>인턴십 연계</li>
+                    <li>취업 성공 사례</li>
+                </ul>
+            </div>
+        </div>
+        <div class="new-textbox">
+            <div class="new-textbox-left"><img src="21.png" alt="한국어 학원 아이콘"></div>
+            <div class="new-textbox-right">
+                <div style="font-weight: bold; font-size: 25px;">대학정보</div>
+                <ul class="table-bullet-list">
+                    <li>대학별 상세 정보</li>
+                    <li>전공별 커리큘럼</li>
+                    <li>입학 요건 안내</li>
+                    <li>장학금 정보</li>    
+                    <li>캠퍼스 생활 가이드</li>
+                </ul>
+            </div>
+        </div>
+        <div class="new-textbox">
+            <div class="new-textbox-left"><img src="22.png" alt="한국어 학원 아이콘"></div>
+            <div class="new-textbox-right">
+                <div style="font-weight: bold; font-size: 25px;">커뮤니티</div>
+                <ul class="table-bullet-list">
+                    <li>유학생 네트워킹</li>
+                    <li>선배 멘토링</li>
+                    <li>문화 교류 행사</li>
+                    <li>스터디 그룹</li>
+                    <li>생활 정보 공유</li>
+                </ul>
+            </div>
+        </div>
+        <div class="new-textbox">
+            <div class="new-textbox-left"><img src="31.png" alt="한국어 학원 아이콘"></div>
+            <div class="new-textbox-right">
+                <div style="font-weight: bold; font-size: 25px;">입학 지원</div>
+                <ul class="table-bullet-list">
+                    <li>입학 상담 서비스</li>
+                    <li>서류 작성 지원</li>
+                    <li>비자 신청 도움</li>
+                    <li>숙소 정보 제공</li>
+                    <li>오리엔테이션 프로그램</li>
+                </ul>
+            </div>
+        </div>
+        <div class="new-textbox">
+            <div class="new-textbox-left"><img src="32.png" alt="한국어 학원 아이콘"></div>
+            <div class="new-textbox-right">
+                <div style="font-weight: bold; font-size: 25px;">각종 정보</div>
+                <ul class="table-bullet-list">
+                    <li>최신 입학 정보</li>
+                    <li>구인구직 정보</li>
+                    <li>문화 행사 정보</li>
+                    <li>각종 법률 지원 정보</li>
+                    <li>금융 지원 정보</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>          
+    </div>
+
+
+    <!-- 새로 추가된 대학소개 제목 -->
+    <div class="section-heading-container">
+        한국 대학 소개
+    </div>
+
+    <!-- 새롭게 추가된 대학 요약 글상자 -->
+    <div class="university-summary-container">
+        <!-- 서울대학교 글상자 -->
+        <div class="university-summary-box">
+            <div class="university-summary-half" style="background-image: url('SEOUL.png');">
+            </div>
+            <div class="university-summary-half">
+                <!-- 제목을 별도의 div로 감싸기 -->
+                <div class="university-title">
+                    <h2>서울대학교</h2>
+                </div>
+                <!-- 설명을 별도의 div로 감싸기 -->
+                <div class="university-description">
+                    <p>대한민국 최고의 국립대학으로, 세계적인 수준의 학문과 연구를 선도하고 있습니다. 다양한 전공과 폭넓은 교육 기회를 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 고려대학교 글상자 -->
+        <div class="university-summary-box">
+            <div class="university-summary-half" style="background-image: url('KOREA.png');">
+            </div>
+            <div class="university-summary-half">
+                <div class="university-title">
+                    <h2>고려대학교</h2>
+                </div>
+                <div class="university-description">
+                    <p>명실상부한 대한민국의 명문 사학입니다. 오랜 역사와 함께 자유롭고 정의로운 학풍을 바탕으로 인재를 양성하고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 연세대학교 글상자 -->
+        <div class="university-summary-box">
+           <div class="university-summary-half" style="background-image: url('YENSEI.png');">
+            </div>
+            <div class="university-summary-half">
+                <div class="university-title">
+                    <h2>연세대학교</h2>
+                </div>
+                <div class="university-description">
+                    <p>아름다운 캠퍼스와 국제적인 교육 환경을 자랑하는 사립대학입니다. 다양한 해외 교류 프로그램과 혁신적인 커리큘럼을 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 이화여자대학교 글상자 -->
+        <div class="university-summary-box">
+            <div class="university-summary-half" style="background-image: url('EUHWA.png');">
+                
+            </div>
+            <div class="university-summary-half">
+                <div class="university-title">
+                    <h2>이화여자대학교</h2>
+                </div>
+                <div class="university-description">
+                    <p>대한민국 최초의 여성 고등 교육기관으로, 여성 인재 양성의 요람 역할을 해왔습니다. 사회 각 분야에서 활약하는 졸업생을 배출하고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 가천대학교 글상자 -->
+        <div class="university-summary-box">
+            <div class="university-summary-half" style="background-image: url('GACHEON.png');">
+                
+            </div>
+            <div class="university-summary-half">
+                <div class="university-title">
+                    <h2>가천대학교</h2>
+                </div>
+                <div class="university-description">
+                    <p>최첨단 시설을 갖춘 미래 지향적인 대학입니다. 실용 학문을 중시하며, 산학 협력을 통해 현장 중심의 교육을 제공합니다.</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 아주대학교 글상자 -->
+        <div class="university-summary-box">
+            <div class="university-summary-half" style="background-image: url('AJOU.png');">
+                
+            </div>
+            <div class="university-summary-half">
+                <div class="university-title">
+                    <h2>아주대학교</h2>
+                </div>
+                <div class="university-description">
+                    <p>글로벌 인재를 양성하는 데 초점을 맞춘 대학입니다. 특히 공학 분야에서 뛰어난 연구 성과를 내고 있으며, 해외 학생들에게도 인기가 높습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+   <div class="section-heading-container">
+        왜 Billion Network 인가?
+    </div>
+    <div class="section-intro-text">
+        여러분의 한국 유학 성공을 위한 가장 현명한 선택, Billion Network 만의 특별한 강점을 확인해 보세요.
+    </div>
+    <div class="strength-grid-container">
+        <!-- 강점 1 -->
+        <div class="strength-box">
+            <div class="strength-top">
+                <img src="b1.png" style="width: auto; height: 70px;">
+            </div>
+            <div class="strength-middle">
+                <p style="font-weight: bold; font-size: 25px;">10개국 이상 현지 에이전트</p>
+            </div>
+            <div class="strength-bottom">
+                <p style="font-weight: normal; font-size: 20px;">전 세계 10개국 이상의 현지 에이전트가 여러분의 모국에서부터 한국 유학의 첫걸음을 함께 합니다. 맞춤형 상담과 지원으로 불안함 없이 유학을 준비하세요.</p>
+                
+            </div>
+        </div>
+        <!-- 강점 2 -->
+        <div class="strength-box">
+            <div class="strength-top">
+                <img src="b2.png" style="width: auto; height: 65px;">
+            </div>
+            <div class="strength-middle">
+                <p style="font-weight: bold; font-size: 25px;">최신 대학 입학 정보</p>
+            </div>
+            <div class="strength-bottom">
+                <p style="font-weight: normal; font-size: 20px;">서울 48개, 경기 60개의 4년제 대학 외국인 전형 정보를 수시로 업데이트하여 가장 정확하고 최신화된 입학 전략을 제공합니다.</p>
+                
+            </div>
+        </div>
+        <!-- 강점 3 -->
+        <div class="strength-box">
+            <div class="strength-top">
+                <img src="b3.png" style="width: auto; height: 70px;">
+            </div>
+            <div class="strength-middle">
+                <p style="font-weight: bold; font-size: 25px;">현지 정착 지원 서비스</p>
+            </div>
+            <div class="strength-bottom">
+                <p style="font-weight: normal; font-size: 20px;">경기도에 본사를 둔 Billion Network는 유학 기간 내내 경제, 법률, 행정, 생활 전반에 걸친 실질적인 국내 지원을 제공합니다.</p>
+                
+            </div>
+        </div>
+        <!-- 강점 4 -->
+        <div class="strength-box">
+            <div class="strength-top">
+                <img src="b4.png" style="width: auto; height: 70px;">
+            </div>
+            <div class="strength-middle">
+                <p style="font-weight: bold; font-size: 25px;">성공적인 한국 취업 연계</p>
+            </div>
+            <div class="strength-bottom">
+                <p style="font-weight: normal; font-size: 20px;">한국 내 취업을 희망하는 학생들을 위해 졸업 후에도 취업 정보를 제공하고, 이력서 및 면접 준비를 지원합니다.</p>
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- 마지막 섹션 -->
+    <div class="final-section-container">
+        <div class="final-section-content">
+            <!-- 그림 상자 (flag) -->
+            <div id="flag" class="flag-image-box">
+                <img src="flag.png" alt="성공을 상징하는 깃발">
+            </div>
+            
+            <!-- 오른쪽에 위치할 모든 텍스트 상자를 감싸는 컨테이너 -->
+            <div class="right-content-wrapper">
+                <div class="text-box-bold">
+                    꿈을 향한 여정,<br>Billion Network가 함께합니다
+                </div>
+                <div class="text-box-normal">
+                    여러분의 성공적인 한국 유학 생활과 빛나는 미래를 위해, 우리는 언제나 최고의 지원을 아끼지 않겠습니다.
+                </div>
+                <!-- 새로 분리된 아이콘 박스 섹션 -->
+                <div class="last-grid-container">
+                    <!-- last 1 -->
+                    <div class="last-box">
+                        <img src="icon1.png" alt="상담 아이콘">
+                        <h3>무료 상담 신청</h3>
+                        <p>전문 상담사와 1:1 맞춤 상담을 받아보세요</p>
+                    </div>
+                    <!-- last 2 -->
+                    <div class="last-box">
+                        <img src="icon2.png" alt="다운로드 아이콘">
+                        <h3>자료 다운로드</h3>
+                        <p>한국 유학 가이드북과 대학 정보를 받아보세요</p>
+                    </div>
+                    <!-- 기존 전체 너비 상자 -->
+                    <div class="last-box full-width-box">
+                        <img src="icon3.png" alt="추가 아이콘">
+                        <h3>Billion Network 소개</h3>
+                        <p>저희 Billion Network에 대한 더 자세한 정보를 확인하세요.</p>
+                    </div>
+                    <!-- 새로 추가된 전체 너비 상자 -->
+                    <div class="last-box full-width-box white-box">
+                       
+                        <h3>파트너 대학 정보</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
